@@ -33,7 +33,7 @@ WHERE c.NAME = 'Appliances' OR c.NAME = 'Games';
 
 /* joins: find the product name, total # sold, and total price sold,
  for Eagles: Hotel California --You may need to use SUM() */
- SELECT p.NAME, Sum(s.Qunatity) as 'Total Units Sold',
+ SELECT p.NAME, Sum(s.Quantity) as 'Total Units Sold',
  Sum(s.quantity *s.PricePerUnit) as 'Total Price'
  FROM products as p
  INNER JOIN sales as s
@@ -47,7 +47,7 @@ WHERE c.NAME = 'Appliances' OR c.NAME = 'Games';
 SELECT p.Name, r.reviewer, r.rating, r.Comment
 FROM products AS p
 INNER JOIN reviews AS r
-ON r.productsID = p.ProductID
+ON r.productID = p.ProductID
 WHERE p.productID = 857 AND r.rating = 1;
 
 
